@@ -747,7 +747,7 @@ class DownloadQueueProcessor(threading.Thread):
                 data = urllib2.urlopen(request)
             except urllib2.URLError, e:
                 axelcommon.log("Connection failed: %s" % e)
-                return str(e.code),""               
+                return str(e),""               
             else:
                 break
 
